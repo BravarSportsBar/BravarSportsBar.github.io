@@ -9,8 +9,6 @@ document.querySelectorAll('.carw').forEach(function(w){var c=w.querySelector('.c
 w.querySelectorAll('.ar').forEach(function(b){b.onclick=function(){c.scrollBy({left:b.dataset.d*340,behavior:'smooth'})}});
 w.onmouseenter=function(){paused=true};w.onmouseleave=function(){paused=false};
 setInterval(function(){if(paused)return;if(c.scrollLeft+c.clientWidth>=c.scrollWidth-10)c.scrollTo({left:0,behavior:'smooth'});else c.scrollBy({left:340,behavior:'smooth'})},4200)});
-var tb=document.querySelectorAll('.tabs button'),pl=document.querySelectorAll('.pl');
-tb.forEach(function(b){b.onclick=function(){tb.forEach(function(x){x.classList.remove('on')});pl.forEach(function(x){x.classList.remove('on')});b.classList.add('on');pl[b.dataset.p].classList.add('on')}});
 
 (function(){var bk=document.getElementById('bk'),lv=[].slice.call(bk.querySelectorAll('.lf')),N=lv.length,s=0,mob=matchMedia('(max-width:820px)'),ch=document.querySelectorAll('.chips button');
 function mx(){return mob.matches?N-1:N}
